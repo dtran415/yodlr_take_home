@@ -1,0 +1,19 @@
+<div class="card my-3 user-card" id="<%= user.id %>">
+    <div class="card-body">
+        <div>
+            Email: <%= user.email%>
+        </div>
+        <div>
+            Name: <%= user.firstName%> <%= user.lastName%><br>
+        </div>
+        <div class="state">
+            State: <%= user.state%>
+        </div>
+        <div>
+            <% if (user.state === 'pending') { %>
+                <button type="button" class="activate-btn btn btn-success my-1" >Activate</button><br>
+            <% } %>
+            <button type="button" class="delete-btn btn btn-danger  my-1" >Delete</button>
+        </div>
+    </div>
+</div>
